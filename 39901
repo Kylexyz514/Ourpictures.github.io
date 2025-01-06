@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoShare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menu de navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="upload.html">Upload</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page d'accueil -->
+  <main>
+    <h1>Welcome to PhotoShare</h1>
+    <p>Your ultimate platform to download and share amazing photos!</p>
+    <a href="gallery.html"><button>Explore Photos</button></a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PhotoShare. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
