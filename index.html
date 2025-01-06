@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhotoShare</title>
+  <title>Our Pictures</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,56 +11,30 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="contact.html">Contact</a>
-    <a href="upload.html">Upload Photos</a>
   </nav>
 
   <!-- Contenu principal -->
   <main>
-    <h1>Welcome to PhotoShare</h1>
-    <p>Explore, download, and share photos effortlessly!</p>
+    <h1>Welcome to Our Pictures</h1>
+    <p>Discover and enjoy beautiful pictures curated by us.</p>
 
-    <!-- Section pour la moyenne des notes -->
-    <section id="average-rating">
-      <h3>Average Rating:</h3>
-      <?php
-      $ratings_file = "ratings.txt";
-      if (file_exists($ratings_file)) {
-          $ratings = file($ratings_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-          $ratings = array_map('intval', $ratings);
-          if (count($ratings) > 0) {
-              $average = array_sum($ratings) / count($ratings);
-              echo "<p>" . round($average, 1) . " / 5</p>";
-          } else {
-              echo "<p>No ratings yet.</p>";
-          }
-      } else {
-          echo "<p>No ratings yet.</p>";
-      }
-      ?>
-    </section>
-
-    <!-- Section pour la notation -->
-    <section id="rating-section">
-      <h2>Rate Our Site</h2>
-      <form id="rating-form" action="rate.php" method="POST">
-        <label for="rating">Your Rating:</label>
-        <select name="rating" id="rating" required>
-          <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
-          <option value="4">⭐⭐⭐⭐ - Good</option>
-          <option value="3">⭐⭐⭐ - Average</option>
-          <option value="2">⭐⭐ - Poor</option>
-          <option value="1">⭐ - Very Bad</option>
-        </select>
-        <br>
-        <button type="submit">Submit Rating</button>
-      </form>
+    <!-- Galerie de photos -->
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <p>Here are some of the best moments shared with you:</p>
+      <!-- Ajoutez vos images ici -->
+      <div class="photo-grid">
+        <img src="images/photo1.jpg" alt="Photo 1">
+        <img src="images/photo2.jpg" alt="Photo 2">
+        <img src="images/photo3.jpg" alt="Photo 3">
+      </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 PhotoShare. All rights reserved.</p>
+    <p>&copy; 2025 Our Pictures. All rights reserved.</p>
   </footer>
 </body>
-  </html>
-                                           
+      </html>
+  
