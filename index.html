@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhotoShare</title>
+  <title>PhotoShare - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,60 +11,32 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="contact.html">Contact</a>
-    <a href="upload.html">Upload Photos</a>
   </nav>
 
   <!-- Contenu principal -->
   <main>
-    <h1>Welcome to PhotoShare</h1>
-    <p>Explore, download, and share photos effortlessly!</p>
-
-    <!-- Section pour la moyenne des notes -->
-    <section id="average-rating">
-      <h3>Average Rating:</h3>
-      <?php
-      $ratings_file = "ratings.txt";
-      if (file_exists($ratings_file)) {
-          $ratings = file($ratings_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-          $ratings = array_map('intval', $ratings);
-          if (count($ratings) > 0) {
-              $average = array_sum($ratings) / count($ratings);
-              echo "<p>" . round($average, 1) . " / 5</p>";
-          } else {
-              echo "<p>No ratings yet.</p>";
-          }
-      } else {
-          echo "<p>No ratings yet.</p>";
-      }
-      ?>
+    <!-- Section Accueil -->
+    <section id="home">
+      <h1>Welcome to PhotoShare</h1>
+      <p>Explore and share moments effortlessly!</p>
     </section>
 
-    <!-- Section pour la notation -->
-    <section id="rating-section">
-      <h2>Rate Our Site</h2>
-      <form id="rating-form" action="rate.php" method="POST">
-        <label for="rating">Your Rating:</label>
-        <select name="rating" id="rating" required>
-          <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
-          <option value="4">⭐⭐⭐⭐ - Good</option>
-          <option value="3">⭐⭐⭐ - Average</option>
-          <option value="2">⭐⭐ - Poor</option>
-          <option value="1">⭐ - Very Bad</option>
-        </select>
+    <!-- Section Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? Reach out to us below:</p>
+      <form id="contact-form" action="contact.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
         <br>
-        <button type="submit">Submit Rating</button>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <br>
+        <button type="submit">Send Message</button>
       </form>
-    </section>
-
-    <!-- Galerie de photos -->
-    <section id="gallery">
-      <h2>Photo Gallery</h2>
-      <p>Here are some of the best moments shared with you:</p>
-      <div class="photo-grid">
-        <img src="images/photo1.jpg" alt="Photo 1">
-        <img src="images/photo2.jpg" alt="Photo 2">
-        <img src="images/photo3.jpg" alt="Photo 3">
-      </div>
     </section>
   </main>
 
@@ -74,3 +46,4 @@
   </footer>
 </body>
 </html>
+
