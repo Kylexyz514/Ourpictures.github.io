@@ -31,6 +31,26 @@ h1, h2 {
   color: #333;
 }
 
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  max-width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+  border-color: #333;
+}
+
 form {
   max-width: 400px;
   margin: 20px auto;
